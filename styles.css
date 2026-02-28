@@ -1,0 +1,55 @@
+:root {
+    /* Fiery Ocean Coolors.co */
+    --deep-red: #780000;
+    --light-red: #c1121f;
+    --cream-white: #fdf0d5;
+    --deep-blue: #003049;
+    --light-blue: #669bbc;
+
+    /* Glass Background */
+    --glass-cream: rgba(253, 240, 213, .2);
+    --glass-border: rgba(0, 0, 0, .2);
+
+    /* Text Colors */
+    --text-primary: #fdf0d5;
+    --text-secondary: rgba(253, 240, 213, .7);
+    --text-muted: rgba(253, 240, 213, .4);
+}
+
+body {
+    background:linear-gradient(to bottom, var(--light-blue), var(--deep-blue));
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-primary)
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 440px;
+}
+
+.login-card {
+    background-color: var(--glass-cream);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 40px;
+    border-radius: 20px;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-title p {
+    color: var(--text-muted);
+    margin-top: 10px;
+}
