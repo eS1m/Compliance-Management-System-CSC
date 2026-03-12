@@ -7,17 +7,23 @@
     --light-blue: #669bbc;
 
     /* Glass Background */
-    --glass-cream: rgba(253, 240, 213, .2);
-    --glass-border: rgba(0, 0, 0, .2);
+    --glass-cream: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(102, 102, 102, 0.4);
 
     /* Text Colors */
     --text-primary: #fdf0d5;
-    --text-secondary: rgba(253, 240, 213, .7);
-    --text-muted: rgba(253, 240, 213, .4);
+    --text-secondary: rgba(253, 240, 213, .3);
+    --text-muted: rgba(253, 240, 213, .3);
 }
 
 body {
     background:linear-gradient(to bottom, var(--light-blue), var(--deep-blue));
+    background-image:url(/img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
     font-family: 'Outfit', sans-serif;
     color: var(--text-primary)
 }
@@ -65,9 +71,41 @@ body {
     align-items: center;
 }
 
+.login-title, h1 {
+    color: white;
+}
 
-
-.login-title p {
+.login-title p{
     color: var(--text-muted);
-    margin-top: 10px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    
+    font-size: 14px;
+    text-align: left;
+
+    color: white;
+
+
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+
+    background: var(--glass-cream);
+
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    
+    color: var(--text-primary);
+
+    font-family:inherit;
+    font-size: 16px;
 }
