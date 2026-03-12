@@ -30,11 +30,6 @@ body {
     width: 100%;
 }
 
-.login-container {
-    width: 100%;
-    max-width: 440px;
-}
-
 .login-card {
     background-color: var(--glass-cream);
     border: 1px solid var(--glass-border);
@@ -48,6 +43,29 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+.login-container {
+    width: 100%;
+    max-width: 440px;
+}
+
+.login-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-logo {
+    background: linear-gradient(to bottom right, var(--light-blue), var(--cream-white));
+    border-radius: 20px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 .login-title p {
     color: var(--text-muted);
