@@ -24,6 +24,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 
+    overflow: hidden;
+
     font-family: 'Outfit', sans-serif;
     color: var(--text-primary)
 }
@@ -33,7 +35,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
 }
 
 .login-card {
@@ -73,10 +75,45 @@ body {
 
 .login-title, h1 {
     color: white;
+    margin-bottom: 0px;
 }
 
 .login-title p{
+    margin-top: 10px;
+    margin-bottom: 0px;
+
     color: var(--text-muted);
+    font-size: .9rem;
+}
+
+.login-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.login-divider::before,
+.login-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: var(--text-muted);
+}
+
+.login-divider span {
+    color: var(--text-muted);
+    font-size: .8rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin-top: 10px;
 }
 
 .input-group {
@@ -91,8 +128,7 @@ body {
 
     color: white;
 
-
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .form-input {
@@ -103,9 +139,43 @@ body {
 
     border: 1px solid var(--glass-border);
     border-radius: 10px;
+    box-sizing: border-box;
     
     color: var(--text-primary);
 
     font-family:inherit;
     font-size: 16px;
+
+    margin-bottom: 12px;
+
+    transition: 0.15s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--light-blue);
+    box-shadow: 0 0 5px var(--light-blue);
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+
+    font-family: inherit;
+    font-weight: 500;
+
+    background: linear-gradient(to bottom right, var(--cream-white), var(--light-blue));
+    border: none;
+    border-radius: 10px;
+    color:black;
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.login-button:hover {
+    box-shadow: 0 0 10px var(--light-blue);
+    transform: translateY(-2px);
 }
